@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import Header from '@/components/Header';
 import { 
   Zap, 
   Shield, 
@@ -54,7 +53,22 @@ export default function LandingPage() {
       </Head>
 
       <div className="min-h-screen bg-gray-900">
-        <Header />
+        {/* Simple Header */}
+        <div className="bg-gray-800 border-b border-gray-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              <Link href="/" className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">T</span>
+                </div>
+                <span className="text-xl font-bold gradient-text">Tevra</span>
+              </Link>
+              <Link href="/dashboard" className="btn-primary">
+                Launch App
+              </Link>
+            </div>
+          </div>
+        </div>
         
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
